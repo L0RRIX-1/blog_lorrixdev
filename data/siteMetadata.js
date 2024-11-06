@@ -1,21 +1,21 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Min71 Dev Blog',
-  author: 'Lee MinGi',
-  headerTitle: 'Min71 Dev Blog',
+  title: 'Lorrix Blog',
+  author: 'Lorrix',
+  headerTitle: 'Lorrix Blog',
   description: 'Step by step, but Steadily and Consistently 📝',
   language: 'en-us',
-  theme: 'system', // system, dark or light
-  siteUrl: 'https://min71.dev',
-  siteRepo: 'https://github.com/mingi3442/blog',
+  theme: 'dark', // system, dark or light
+  siteUrl: 'https://lorrixdev.it',
+  siteRepo: '',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/banner.jpeg',
   // mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'mingi3442@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/min71',
-  github: 'https://github.com/mingi3442',
-  twitter: 'https://twitter.com/min_71_dev',
-  facebook: 'https://facebook.com',
+  //email: '',
+  //linkedin: '',
+  //github: '',
+  //twitter: '',
+  //facebook: '',
   // youtube: 'https://youtube.com',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
