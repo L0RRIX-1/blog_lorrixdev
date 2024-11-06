@@ -1,22 +1,11 @@
-/**
- * CSS Styles for code highlighting.
- * Feel free to customize token styles 
- * by copying from a prismjs compatible theme:
- * https://github.com/PrismJS/prism-themes
- */
-
 /* Code title styles */
 .remark-code-title {
-  @apply rounded-t bg-gray-700 dark:bg-gray-800 px-5 py-3 font-mono text-sm font-bold text-gray-200;
-}
-
-.remark-code-title + div > pre {
-  @apply mt-0 rounded-t-none;
+  @apply rounded-t bg-gray-900 dark:bg-gray-950 px-5 py-3 font-mono text-sm font-bold text-gray-100;
 }
 
 /* Code block styles */
 .code-highlight {
-  @apply float-left min-w-full;
+  @apply float-left min-w-full bg-gray-950;
 }
 
 .code-line {
@@ -24,85 +13,78 @@
 }
 
 .code-line.inserted {
-  @apply bg-green-500 bg-opacity-20;
+  @apply bg-green-600 bg-opacity-30;
 }
 
 .code-line.deleted {
-  @apply bg-red-500 bg-opacity-20;
+  @apply bg-red-600 bg-opacity-30;
 }
 
 .highlight-line {
-  @apply -mx-4 border-l-4 border-primary-500 bg-gray-700 bg-opacity-50;
+  @apply -mx-4 border-l-4 border-cyan-400 bg-gray-800 bg-opacity-60;
 }
 
 .line-number::before {
-  @apply mr-4 -ml-2 inline-block w-4 text-right text-gray-400;
+  @apply mr-4 -ml-2 inline-block w-4 text-right text-gray-500;
   content: attr(line);
 }
 
 /* Token styles */
-/**
- * MIT License
- * Copyright (c) 2018 Sarah Drasner
- * Sarah Drasner's[@sdras] Night Owl
- * Ported by Sara vieria [@SaraVieira]
- * Added by Souvik Mandal [@SimpleIndian]
- */
 .token.comment,
 .token.prolog,
 .token.cdata {
-  color: rgb(99, 119, 119);
+  color: rgb(104, 151, 187); /* Metal grey-blue */
   font-style: italic;
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  color: rgb(144, 255, 244); /* Neon cyan */
 }
 
 .namespace {
-  color: rgb(178, 204, 214);
+  color: rgb(129, 216, 247); /* Light ciano-blue */
 }
 
 .token.deleted {
-  color: rgba(239, 83, 80, 0.56);
+  color: rgba(255, 99, 71, 0.7); /* Muted red */
   font-style: italic;
 }
 
 .token.symbol,
 .token.property {
-  color: rgb(128, 203, 196);
+  color: rgb(41, 183, 163); /* Deep teal */
 }
 
 .token.tag,
 .token.operator,
 .token.keyword {
-  color: rgb(127, 219, 202);
+  color: rgb(0, 255, 242); /* Electric cyan */
 }
 
 .token.boolean {
-  color: rgb(255, 88, 116);
+  color: rgb(255, 174, 66); /* Bright orange */
 }
 
 .token.number {
-  color: rgb(247, 140, 108);
+  color: rgb(255, 110, 74); /* Neon orange */
 }
 
 .token.constant,
 .token.function,
 .token.builtin,
 .token.char {
-  color: rgb(130, 170, 255);
+  color: rgb(137, 180, 255); /* Bright electric blue */
 }
 
 .token.selector,
 .token.doctype {
-  color: rgb(199, 146, 234);
+  color: rgb(255, 99, 235); /* Vibrant pink */
   font-style: italic;
 }
 
 .token.attr-name,
 .token.inserted {
-  color: rgb(173, 219, 103);
+  color: rgb(161, 255, 109); /* Neon green */
   font-style: italic;
 }
 
@@ -111,19 +93,19 @@
 .token.entity,
 .language-css .token.string,
 .style .token.string {
-  color: rgb(173, 219, 103);
+  color: rgb(161, 255, 109); /* Neon green */
 }
 
 .token.class-name,
 .token.atrule,
 .token.attr-value {
-  color: rgb(255, 203, 139);
+  color: rgb(255, 111, 199); /* Electric pink */
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: rgb(214, 222, 235);
+  color: rgb(183, 210, 245); /* Light sky blue */
 }
 
 .token.important,

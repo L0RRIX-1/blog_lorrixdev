@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Task list styles */
 .task-list-item::before {
   @apply hidden;
 }
@@ -10,28 +11,38 @@
   @apply list-none;
 }
 
+/* Footnote styles */
 .footnotes {
-  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
+  @apply mt-12 border-t border-gray-700 pt-8 dark:border-gray-900;
+  border-image: linear-gradient(to right, #34d399, #2563eb) 1; /* Neon gradient border */
 }
 
+/* Footnote back reference */
 .data-footnote-backref {
-  @apply no-underline;
+  @apply no-underline text-cyan-400 hover:text-cyan-300;
+  transition: color 0.3s ease-in-out;
 }
 
+/* Citation entry style */
 .csl-entry {
   @apply my-5;
+  border-left: 3px solid rgba(255, 255, 255, 0.3); /* Subtle glowing edge */
+  padding-left: 1rem;
+  color: rgba(161, 255, 109, 0.9); /* Futuristic green */
 }
+
+/* Link underline with futuristic animation */
 .link-underline {
   border-bottom-width: 0;
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#0ea5e9, #0ea5e9); /* Electric blue */
   background-size: 0 3px;
   background-position: 0 100%;
   background-repeat: no-repeat;
-  transition: background-size 0.5s ease-in-out;
+  transition: background-size 0.3s ease-in-out;
 }
 
 .link-underline-black {
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#2563eb, #2563eb);
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#34d399, #34d399); /* Neon green */
 }
 
 .link-underline:hover {
@@ -39,10 +50,25 @@
   background-position: 0 100%;
 }
 
-/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+/* Autofill styles to avoid unwanted browser styles */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-  transition:
-    background-color 600000s 0s,
-    color 600000s 0s;
+  transition: background-color 600000s 0s, color 600000s 0s;
+  -webkit-text-fill-color: #0ea5e9; /* Electric blue text */
+  background-color: #1f2937 !important; /* Dark background */
+}
+
+/* Input styles for a futuristic look */
+input,
+textarea {
+  @apply border-none outline-none rounded-lg bg-gray-900 text-cyan-400;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #0f172a; /* Darker shade on focus */
+  color: #7dd3fc; /* Light cyan text */
+  box-shadow: 0 0 5px 2px rgba(14, 165, 233, 0.6); /* Cyan glow */
 }
