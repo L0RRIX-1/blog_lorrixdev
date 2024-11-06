@@ -14,7 +14,7 @@ export default function AboutContent() {
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto p-2 pr-8 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center"
           id="language"
           onChange={handleLanguageChange}
-          defaultValue={'it'} 
+          defaultValue={'ko'} // 현재 선택된 언어를 표시
         >
           <option selected value="ko">
             🇰🇷&nbsp;한국어
