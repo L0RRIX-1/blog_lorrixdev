@@ -1,53 +1,32 @@
 ---
-title: 'About Bitcoin Basic'
-date: '2022-05-23'
-lastmod: '2022-05-23'
-tags: ['Bitcoin', 'UTXO']
-draft: false
-summary: 'Satishi Nakamoto가 2009년 발표한 대표적인 Public BlockChain 시스템인 Bitcoin에 대해 알아봅니다!'
+title: 'Come proteggere il proprio server
+Minecraft in modo gratuito!'
+date: '08-11-2024'
+lastmod: '08-11-2024'
+tags: ['Minecraft', 'Cybersecurity']
+draft: true
+summary: 'Configurare un antiddos per il proprio server minecraft'
 images: ['/static/images/thumbnail/bitcoin.jpeg']
-canonicalUrl: 'https://min71.dev/posts/bitcoin'
+canonicalUrl: 'https://blog.lorrixdev.it/posts/protect-your-minecraft-server-for-free'
 ---
 
-![](/static/images/bitcoin.jpeg)
+![](https://i.imgur.com/NOd6c8h.jpeg)
 
-# Bitcoin
+I server Minecraft utilizzano software complessi e, nonostante siano
+costantemente aggiornati e ottimizzati, sono frequentemente soggetti a
+numerose minacce. Tra quelle più comuni troviamo la tipologia di
+attacco informatico DDoS, ovvero l'invio eccessivo di dati con l'obiettivo
+di causare problemi ad un server. Questo tipo di attacco può facilmente
+sovraccaricare un server, causando lag estremi o persino crash. Ecco
+perché è molto importante mantenere segreto l'indirizzo IP della
+macchina ospitante il server. In questo articolo, vedremo come
+proteggere il proprio server Minecraft in modo completamente gratuito,
+concentrandoci sulla configurazione di un sistema Anti-DDoS.
+Sfortunatamente questo tipo di attacco è solo una delle vulnerabilità
+presenti, questa guida non include come proteggere il vostro server da
+bug, exploit, plugin malevoli o attacchi inerenti a software ospitati sul
+vostro VPS/dedicato oltre al vostro server Minecraft!
 
-**_Satishi Nakamoto가 2009년 발표한 대표적인 Public BlockChain 시스템입니다._**
-
----
-
-## Bitcoin의 특징
-
-- **ECDSA** 기반의 전자 서명 알고리즘을 이용합니다.
-
-- **9000개 이상의 Full Node로 구성된 네트워크를 보유하고 있습니다.**
-
-- **평균 10분마다 새로운 블록을 채굴중이라고 합니다.**
-
-  ⤷ _PoW 난이도 조절을 통해 채굴 속도를 조절하며 이를 통해 **stale block의 양을 줄이며, 51% Attack**도 방지할 수 있습니다._
-
-- **통화 발행은 2,100만개로 제한되어 있습니다.**
-
-  ⤷ _인플레이션 방지를 위함으로 추측하며 그 이후의 채굴자에게는 **Tx Fee**가 수수료로 돌아간다_
-
-- **한 블록의 평균 크기는 1.29Mbyte입니다**
-
-  ⤷ _한 블록당 약 2000개의 트랜잭션이 포함됩니다._
-
-### Key
-
-**타원 곡선(Secp256k1)을 이용해 개인 키, 공개 키를 사용합니다.**
-
-- **타원 곡선** : $Y^2 = (X^3 + 7) mod p$
-
-- **Private Key ($k$)** : $1$ ~ $2^{256}$ 사이의 랜덤한 숫자
-
-- **Public Key ($K$)** : $k * G$
-
-  ⤷ $G$ : _타원 곡선 상의 고정된 점_
-
-  ⤷ $*$ : _타원 곡선 상의 곱하기 연산_
 
 <div
   style={{
