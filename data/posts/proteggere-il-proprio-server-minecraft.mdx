@@ -1,16 +1,3 @@
----
-title: Come proteggere il proprio server Minecraft in modo gratuito!
-date: 08-11-2024
-lastmod: 08-11-2024
-tags:
-  - Minecraft
-  - Cybersecurity
-draft: false
-summary: Configurare un antiddos per il proprio server minecraft
-images:
-  - https://i.imgur.com/NOd6c8h.jpeg
-canonicalUrl: https://blog.lorrixdev.it/posts/protect-your-minecraft-server-for-free
----
 
 ![](https://i.imgur.com/NOd6c8h.jpeg)
 
@@ -35,8 +22,6 @@ Presto detto! Il problema è che in questo modo chiunque potrebbe inviare dati e
 
 Questa eventualità, menzionata prima, può portare a far laggare eccessivamente il server, alzare il ping in modo drastico o addirittura farlo crashare.
 
-  
-
 Il modo più semplice per evitarlo è configurare uno dei molti servizi Anti-DDoS per server Minecraft!
 
 ---
@@ -48,12 +33,10 @@ Di seguito un piccolo esempio per far capire le differenza nell'usare usare uno 
 
 Gino —->  play.ilvostrobellissimoserver.it —-> 127.0.0.1:25565 
 
-  
 **Con un Anti-DDoS**
 
 Gino —-> play.ilvostrobellissimoserver.it —-> Anti-DDoS —-> 127.0.0.1:25565 
 
-  
 Come si può vedere quando si utilizza uno di questi servizi il giocatore NON invia dati direttamente al vostro server, ma “passa” tramite i server del vostro gestore, che ha il compito di reindirizzare eventuali pacchetti malevoli fuori dal vostro server, accettando solo connessioni sicure e verificate.
 
 ---
@@ -98,7 +81,7 @@ Ogni gestore ha un procedimento diverso, alcuni bisogna creare più record o uti
 
 Come primo passo dovrete creare un record di tipologia CNAME, l'esempio sottostante prevede che il mio IP: play.serverbello.it punti ai server del mio gestore:
 
-**![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcMdRYHQWDHrhYO5vc9tpO7jzON5DtD-Ewqklke04eE4kkyA3VH2F8DpxYJaEOHsOiNkQCUlJMyXT_hvrgZwx8pndEfPD1gYc-if7UBTKbHfBeTI-HvufbHLMTg2izOm_vYBNqYMa0mj_7AKFEThtIslVMj?key=JbEGiC79GQX1LOxRgHN5dw)
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcMdRYHQWDHrhYO5vc9tpO7jzON5DtD-Ewqklke04eE4kkyA3VH2F8DpxYJaEOHsOiNkQCUlJMyXT_hvrgZwx8pndEfPD1gYc-if7UBTKbHfBeTI-HvufbHLMTg2izOm_vYBNqYMa0mj_7AKFEThtIslVMj?key=JbEGiC79GQX1LOxRgHN5dw)
 
 **Name**: Sottodominio con il quale i vostri giocatori si connetteranno, in questo caso ho usato “play”.
 
@@ -129,20 +112,15 @@ Spigot e i suoi principali fork non hanno questa funzione integrata di base, ci�
 ---
 ## Il gioco è fatto!
 
-  
-
 Se avete fatto tutto correttamente ora dovreste vedere il vostro server online senza differenze rispetto a prima, come capire se ha funzionato? 
 
 Aprite il prompt dei comandi del vostro computer ed eseguite il comando:
 
-  
-
 > ping play.serverbello.it
 
-  
 Dovrebbe mostrarvi un indirizzo IP numerico e altri valori sulla latenza, se l'indirizzo mostrato è diverso da quello del vostro VPS/dedicato significa che il procedimento è andato a buon fine!
 
-  Nel caso di qualsiasi problema con l'esecuzione di questo comando recatevi su [mcsrvstat.us](https://mcsrvstat.us/), inserite il vostro dominio, cliccate invio e attivate le Debug info, nella sezione IP address vedrete l'IP numerico a cui il vostro server punta!
+Nel caso di qualsiasi problema con l'esecuzione di questo comando recatevi su [mcsrvstat.us](https://mcsrvstat.us/), inserite il vostro dominio, cliccate invio e attivate le Debug info, nella sezione IP address vedrete l'IP numerico a cui il vostro server punta!
   
 ---
 ## Qualche problema?
@@ -198,6 +176,6 @@ Adesso avete imparato come configurare un Anti-DDoS per il vostro server Minecra
 ---
 ## Links utili
 
-- - [Il mio sito](https://lorrixdev.it)
-- - [Discord](https://discord.lorrixdev.it)
+-  [Il mio sito](https://lorrixdev.it)
+-  [Discord](https://discord.lorrixdev.it)
   
