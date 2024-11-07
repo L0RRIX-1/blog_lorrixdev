@@ -20,7 +20,7 @@ export function TypedIntroduceWrapper() {
       strings: [
         'Ehilà, benvenuto nel mio blog!',
         `Sono appassionato di minecraft, elettronica e programmazione`,
-        'Voglio condividere con tutti le mie conoscenze apprese nel corso del tempo',
+        'Voglio condividere le mie conoscenze apprese nel corso del tempo',
         'Se ti interessa saperne di più unisciti al mio discord!',
       ],
       typeSpeed: 40,
