@@ -88,7 +88,7 @@ export default async function Page({ params }: { params: { slug: string[]; local
     return (
       <div className="mt-24 text-center">
         <PageTitle>
-          Under Construction{' '}
+          Not available yet, check back later{' '}
           <span role="img" aria-label="roadwork sign">
             🚧
           </span>
