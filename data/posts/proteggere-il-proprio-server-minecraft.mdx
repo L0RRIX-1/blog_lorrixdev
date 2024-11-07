@@ -1,45 +1,23 @@
 ---
-title: 'Come proteggere il proprio server Minecraft in modo gratuito!'
-date: '08-11-2024'
-lastmod: '08-11-2024'
-tags: ['Minecraft', 'Cybersecurity']
+title: Come proteggere il proprio server Minecraft in modo gratuito!
+date: 08-11-2024
+lastmod: 08-11-2024
+tags:
+  - Minecraft
+  - Cybersecurity
 draft: false
-summary: 'Configurare un antiddos per il proprio server minecraft'
-images: [https://i.imgur.com/NOd6c8h.jpeg]
-canonicalUrl: 'https://blog.lorrixdev.it/posts/protect-your-minecraft-server-for-free'
+summary: Configurare un antiddos per il proprio server minecraft
+images:
+  - https://i.imgur.com/NOd6c8h.jpeg
+canonicalUrl: https://blog.lorrixdev.it/posts/protect-your-minecraft-server-for-free
 ---
 
 ![](https://i.imgur.com/NOd6c8h.jpeg)
 
-I server Minecraft utilizzano software complessi e, nonostante siano
-costantemente aggiornati e ottimizzati, sono frequentemente soggetti a
-numerose minacce. Tra quelle più comuni troviamo la tipologia di
-attacco informatico DDoS, ovvero l'invio eccessivo di dati con l'obiettivo
-di causare problemi ad un server. Questo tipo di attacco può facilmente
-sovraccaricare un server, causando lag estremi o persino crash. Ecco
-perché è molto importante mantenere segreto l'indirizzo IP della
-macchina ospitante il server. In questo articolo, vedremo come
-proteggere il proprio server Minecraft in modo completamente gratuito,
-concentrandoci sulla configurazione di un sistema Anti-DDoS.
-Sfortunatamente questo tipo di attacco è solo una delle vulnerabilità
-presenti, questa guida non include come proteggere il vostro server da
-bug, exploit, plugin malevoli o attacchi inerenti a software ospitati sul
-vostro VPS/dedicato oltre al vostro server Minecraft!
 
+I server Minecraft utilizzano software complessi e, nonostante siano costantemente aggiornati e ottimizzati, sono frequentemente soggetti a numerose minacce. Tra quelle più comuni troviamo la tipologia di attacco informatico DDoS, ovvero l'invio eccessivo di dati con l'obiettivo di causare problemi ad un server. Questo tipo di attacco può facilmente sovraccaricare un server, causando lag estremi o persino crash. Ecco perché è molto importante mantenere segreto l'indirizzo IP della macchina ospitante il server. In questo articolo, vedremo come proteggere il proprio server Minecraft in modo completamente gratuito, concentrandoci sulla configurazione di un sistema Anti-DDoS.
 
-<div
-  style={{
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    borderRadius: '8px',
-    boxShadow:'0px 1px 1px 0px rgba(0,0,0,0.08) 0px 2px 2px 0px rgba(0,0,0,0.12) 0px 4px 4px 0px rgba(0,0,0,0.16) 0px 8px 8px 0px rgba(0,0,0,0.2)',   
-    padding:"0.1rem 1.5rem",
-    margin:"1rem 0"
-  }}
->
- ✅ _이 부분은 [이전게시글](https://min71.dev/posts/cryptography-digital-signature#ecdsa-%ED%83%80%EC%9B%90%EA%B3%A1%EC%84%A0-%EB%94%94%EC%A7%80%ED%84%B8-%EC%84%9C%EB%AA%85-%EA%B5%AC%EC%A1%B0)의 **ECDSA**부분을 참고하면 됩니다._
-
-</div>
-
+Sfortunatamente questo tipo di attacco è solo una delle vulnerabilità presenti, questa guida non include come proteggere il vostro server da bug, exploit, plugin malevoli o attacchi inerenti a software ospitati sul vostro VPS/dedicato oltre al vostro server Minecraft!
 ## In cosa consiste?
 
 Al giorno d'oggi è molto comune che qualche malintenzionato provi a effettuare attacchi DDoS, Griefing o simili per cercare di arrecare danni ad un server Minecraft. Sfortunatamente questa pratica si è diffusa a perdita d'occhio e col passare del tempo è diventata sempre più semplice; la causa principale è che sempre più persone non sono a conoscenza di questo problema o non sanno come risolverlo in modo ottimale.  L'obiettivo di questo articolo è insegnarvi come evitare che ciò accada riducendo drasticamente i rischi!
@@ -51,160 +29,175 @@ Utilizzare un dominio e reindirizzarlo al vostro IP rende indifferente il risult
 
 
 ---
+## Quale sarebbe il problema?
 
-## Transaction
+Presto detto! Il problema è che in questo modo chiunque potrebbe inviare dati e/o pacchetti col solo scopo di causare danni e sovraccaricare il vostro server, come se entrassero tantissimi giocatori nello stesso momento, senza troppe difficoltà. 
 
-**비트코인에서의 트랜잭션은 화폐의 흐름을 표기**
+Questa eventualità, menzionata prima, può portare a far laggare eccessivamente il server, alzare il ping in modo drastico o addirittura farlo crashare.
 
-```JSON
-{
-  "version": 1,
-  "locktime": 0,
-  "vin": [{
-	"txid": "7957a35fe64f80d234d76d83a2a8f1a0d8149a41d81de548f0a65a8a999f6f18",
-	"vout": 0,
-	"scriptSig" : "3045022100884d142d86652a3f47ba4746ec719bbfbd040a570b1deccbb6498c75c4ae24cb02204b9f039 ff08df09cbe9f6addac960298cad530a863ea8f53982c09db8f6e3813[ALL] 0484ecc0d46f1918b30928fa0e4ed99f16a0fb4fde0735e7ade8416ab9fe423cc5412336376789d172787e c3457eee41c04f4938de5cc17b4a10fa336a8d752adf",
-	"sequence": 4294967295 }],
-  "vout": [{
-	"value": 0.01500000,
-	"scriptPubKey": "OP_DUP OP_HASH160 ab68025513c3dbd2f7b92a94e0581f5d50f654e7 OP_EQUALVERIFY OP_CHECKSIG"
-  },
-  {
-	"value": 0.08450000,
-	"scriptPubKey": "OP_DUP OP_HASH160 7f9b1a7fb68d60c536c2fd8aeaa53a8f3cc025a8 OP_EQUALVERIFY OP_CHECKSIG",
-  }]
-}
+  
 
-```
+Il modo più semplice per evitarlo è configurare uno dei molti servizi Anti-DDoS per server Minecraft!
 
-- **Input** : _트랜잭션 id와 포함한 Signature, Locking Script(scriptPubKey) 등이 포함되어 있습니다._
+---
+## Come funziona?
 
-- **Output** : _트랜잭션 결과로 가져갈 금액과 Unlocking Scrript(scriptSig)가 포함되어 있습니다._
+Di seguito un piccolo esempio per far capire le differenza nell'usare usare uno di questi servizi e non farlo, prendiamo per esempio il giocatore Gino che prova a connettersi al nuovo server Minecraft che ha trovato:
 
-- **Tx fee** : _트랜잭션을 포함한 블록을 채굴할 마이너에게 지급되는 fee로 `입력금액 - 출력금액`으로 계산됩니다._
+**Senza Anti-DDoS**
 
-### Tx Verification
+Gino —->  play.ilvostrobellissimoserver.it —-> 127.0.0.1:25565 
 
-**각 Node들은 이웃 Node들에게 전파하기 전, 유효성을 검증한 후 전파합니다.**
+  
+**Con un Anti-DDoS**
 
-<div
-  style={{
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    borderRadius: '8px',
-    boxShadow:'0px 1px 1px 0px rgba(0,0,0,0.08) 0px 2px 2px 0px rgba(0,0,0,0.12) 0px 4px 4px 0px rgba(0,0,0,0.16) 0px 8px 8px 0px rgba(0,0,0,0.2)',   
-    padding:"0.1rem 1.5rem",
-    margin:"1rem 0"
-  }}
->
+Gino —-> play.ilvostrobellissimoserver.it —-> Anti-DDoS —-> 127.0.0.1:25565 
 
-✅ _각 Node들이 Tx를 검증하기 위한 자세한 CheckList는 [여기서](https://www.oreilly.com/library/view/mastering-bitcoin/9781491902639/ch08.html) `Independent Verification of Transactions` 항목을 통해 확인 가능합니다._
+  
+Come si può vedere quando si utilizza uno di questi servizi il giocatore NON invia dati direttamente al vostro server, ma “passa” tramite i server del vostro gestore, che ha il compito di reindirizzare eventuali pacchetti malevoli fuori dal vostro server, accettando solo connessioni sicure e verificate.
 
-</div>
+---
+# Guida: Come configurare un Anti-DDoS
 
-### UTXO
+### Requisiti
 
-**Unspent Transaction Outputs의 약자로 미사용 트랜잭션 출력 값을 의미합니다.<br/> 따라서 사용자의 총 잔고는 UTXO의 총합을 의미한다고 볼 수 있습니다.**
+- Un dominio e l'accesso ai suoi DNS
+- Accesso al VPS/dedicato dove è ospitato il server Minecraft
 
-<div
-  style={{
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    borderRadius: '8px',
-    boxShadow:'0px 1px 1px 0px rgba(0,0,0,0.08) 0px 2px 2px 0px rgba(0,0,0,0.12) 0px 4px 4px 0px rgba(0,0,0,0.16) 0px 8px 8px 0px rgba(0,0,0,0.2)',   
-    padding:"0.1rem 1.5rem",
-    margin:"1rem 0"
-  }}
->
-**✅ UXTO 간단한 예시**
+### Scelta del gestore
 
-_예시를 들자면 A와 B가 저에게 각각 2,000원을 보내주었다고 했을 때 저의 잔고는 4,000원이 아닌 2,000원 두개가 됩니다._
+Il primo step è scegliere il gestore migliore per le vostre esigenze, i più affidabili, conosciuti e utilizzati da grandi server sono:
 
-_다시 제가 C에게 3,000원을 보낼 경우 2,000원 두 개를 트랜잭션에 등록하여, 3,000원은 C에게, 1,000원은 저의 잔고로 등록이 됩니다._
 
-_트랜잭션이 등록되고 블록에 올라가기 전에는 Mempool에 등록되며, 이를 통해 비트코인은 이중지불에 대한 방지를 할 수 있으며 거래에 대한 유효성을 검증하는데 사용됩니다._
+- TcpShield - https://tcpshield.com/
 
-</div>
+- NeoProtect - https://neoprotect.net/
 
-### Coinbase Transaction
+- Infinity-Filter - https://www.infinity-filter.com/
 
-**블록을 채굴한 Miner에게 보상으로 지급되는 Transaction**
+  
+Sono tutti validi e molto simili nella loro versione gratuita, consultate i loro siti per visualizzare i vari piani scegliendo quello che più vi aggrada! 
 
-> 📌 _Miner에게 돌아가는 채굴의 보상은 기존의 UTXO의 거래 수수료와 Coinbase Tx의 합으로 가져가며, 비트코인의 총 발행량인 2,100만개 이후에는 Coinbase Tx는 없이 순수 거래 수수료만 채굴 보상으로 받을 수 있습니다._
+Offrono mediamente un limite di 20-30 giocatori collegati simultaneamente con 1 TB di connessione mensile ciascuno.
+
+Il consiglio è di scegliere quello con i server geograficamente più vicini al vostro, ridurrà il ping e avrà una connessione mediamente più stabile!
+
+---
+## Creazione account
+
+Create un account sul sito del gestore da voi scelto, (se possibile configurate il 2FA!), successivamente create un network e dategli il nome che preferite.
+  
+---
+## Setup record DNS
+
+Adesso dovrete recarvi alla pagina di gestione DNS del vostro dominio, in questo caso utilizzerò CloudFlare:
+
+Ogni gestore ha un procedimento diverso, alcuni bisogna creare più record o utilizzare il loro plugin in modo che funzioni, riferitevi alla documentazione dell’Anti-DDoS da voi scelto!
+
+### Creare un record CNAME 
+
+Come primo passo dovrete creare un record di tipologia CNAME, l'esempio sottostante prevede che il mio IP: play.serverbello.it punti ai server del mio gestore:
+
+**![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcMdRYHQWDHrhYO5vc9tpO7jzON5DtD-Ewqklke04eE4kkyA3VH2F8DpxYJaEOHsOiNkQCUlJMyXT_hvrgZwx8pndEfPD1gYc-if7UBTKbHfBeTI-HvufbHLMTg2izOm_vYBNqYMa0mj_7AKFEThtIslVMj?key=JbEGiC79GQX1LOxRgHN5dw)
+
+**Name**: Sottodominio con il quale i vostri giocatori si connetteranno, in questo caso ho usato “play”.
+
+**Target**: Questo sarà un codice specifico che potete trovare nella sezione DNS/Backend de pannello del vostro gestore Anti-DDoS.
+
+ **Proxy** **Status**: Disattivato
+
+**TTL**: Automatico
+
+---
+## Aggiungere il server al pannello
+
+Recatevi nel pannello dove siete stati reindirizzati dopo aver creato un account sul sito da voi scelto in precedenza, andate nella sezione Backend, cliccate su crea e inserite l’IP e la porta del vostro server Minecraft, per fare un esempio supponiamo che il vostro IP sia 127.0.0.1 e la vostra porta 25565 (porta default di Minecraft), in questo caso dovrete inserire: 127.0.0.1:25565, ricordatevi di salvare!
+
+---
+## Configurare il server
+
+#### Ora bisogna configurare il server! 
+
+### Se avete un proxy (Come BungeeCord o Velocity):
+
+Abilitate la funzione “Proxy-Protocol” (o HAProxy-Protocol se usate Velocity) nel file di configurazione del vostro proxy e nel pannello sopra citato (Sezione Backend). È una funzione integrata nei proxy che preserva informazioni importanti come l'indirizzo IP del client di origine. Senza di essa, il proxy non potrebbe trasmettere queste informazioni al server finale e l'IP di ogni giocatore risulterebbe identico. Questo protocollo rende il server più sicuro e consente ai giocatori di essere reindirizzati direttamente al vostro server. 
+
+### Se avete un server Spigot (o fork):
+
+Spigot e i suoi principali fork non hanno questa funzione integrata di base, ciò significa che dovrete installare il plugin fornito dal vostro gestore, ricordatevi di NON utilizzare plugman o simili per attivarlo, ma riavviate il vostro server! Una volta fatto, assicuratevi di abilitare la funzione (cambia nome per ogni plugin), che obbliga gli utenti a connettersi tramite i server del vostro gestore ed evitare che il vostro indirizzo IP venga trovato!
+
+---
+## Il gioco è fatto!
+
+  
+
+Se avete fatto tutto correttamente ora dovreste vedere il vostro server online senza differenze rispetto a prima, come capire se ha funzionato? 
+
+Aprite il prompt dei comandi del vostro computer ed eseguite il comando:
+
+  
+
+> ping play.serverbello.it
+
+  
+Dovrebbe mostrarvi un indirizzo IP numerico e altri valori sulla latenza, se l'indirizzo mostrato è diverso da quello del vostro VPS/dedicato significa che il procedimento è andato a buon fine!
+
+  Nel caso di qualsiasi problema con l'esecuzione di questo comando recatevi su [mcsrvstat.us](https://mcsrvstat.us/), inserite il vostro dominio, cliccate invio e attivate le Debug info, nella sezione IP address vedrete l'IP numerico a cui il vostro server punta!
+  
+---
+## Qualche problema?
+
+Ecco una piccola lista degli errori più comuni e come risolverli!
+
+### “Invalid Hostname”
+
+  Se quando pingate il vostro server il MOTD è cambiato e segnala questo errore, significa che il vostro gestore non riesce a connettersi al vostro dominio correttamente, le cause potrebbero essere molte, ricontrollate che:
+
+- Il dominio o sottodominio da voi scelto sia registrato correttamente sul pannello del vostro gestore
+
+- Non abbiate altri record CNAME/SRV che vadano in contrasto con il dominio configurato o col target del vostro gestore
+
+-  Abbiate scritto correttamente il vostro dominio 
+  
+Fate attenzione a controllare con attenzione questi punti, una sola mancanza, anche se minima, farà in modo che non funzioni!
+
+### “Vengo disconnesso appena entro”
+
+  
+In questo caso l'errore sembra causato dal fatto che il proxy del vostro gestore non stia riuscendo a collegarsi al vostro server, le cause possono essere:
+
+  - L'indirizzo IP e/o porta da voi specificati sul pannello non sono gli stessi che il vostro server sta usando
+ -  Il vostro server non è raggiungibile
+
+Per risolvere il primo problema basta semplicemente ricontrollare di aver inserito i dati correttamente sul pannello e assicurarsi che la porta specificata sia la stessa che il vostro server sta usando.
+
+  Per il secondo problema dovete controllare se il vostro server è raggiungibile dall'esterno, quindi usando un tool come [yougetsignal.com](https://www.yougetsignal.com/tools/open-ports/), inserire i dati richiesti  e controllare se l'indirizzo e la porta da voi specificati siano aperti e che accettino connessioni.
+
+### “Quando entro il server lagga ed è molto lento!”
+
+Anche in questa evenienza le cause potrebbero essere molteplici, le più comuni sono:
+
+- Il valore medio dei TPS del vostro server è basso e di conseguenza crea un lag generale ancora più accentuato rispetto a prima.
+
+- Il vostro server impiega più tempo del previsto a caricarsi, causato da processi in background che usano troppa CPU o RAM.
+
+- Il vostro server é geograficamente molto lontano dai proxy del vostro gestore, succede perchè i pacchetti devono fare molti più passaggi per arrivare a destinazione, questo può capitare se si acquistano server molto economici in parti remote del mondo.
+
+Per monitorare le prestazioni del server, potete utilizzare il comando /tps (se state utilizzando Paper è integrato) oppure installando il plugin Spark. L'output del comando mostrerà una lista di numeri: più questi numeri sono vicini a 20, meglio è. Se invece i valori sono mediamente più bassi, dovrete identificare e ridurre le cause di lag sul vostro server Minecraft. Se volete una diagnostica più precisa, eseguite (sempre con Spark) il comando /Spark healthreport, vi fornirà dettagli maggiori sul vostro server e potrete verificare se non ha abbastanza risorse per processare i dati.
+
+Per il terzo punto ahimè non c'è molto da fare, avete essenzialmente due opzioni, comprare un server geograficamente più vicino, o (se il gestore offre questo servizio) comprare un piano a pagamento per usufruire di eventuali loro server che il piano gratuito non includeva.
+
+Nel caso in cui nessuno di questi errori sia quello che state riscontrando, la raccomandazione  è di riferirsi alle documentazioni apposite, se anche con esse non riuscite a risolvere il problema richiedete supporto sul loro Discord, saranno felici di aiutarvi!
 
 ---
 
-## Bitcoin Node
+## Conclusioni
 
-**노드들은 대표적으로 네 가지 역할을 갖고 있습니다.**
-
-- **Routing** : _트랜잭션과 블록을 검증 및 전파하며 다른 Peer와 연결을 유지합니다._
-
-- **BlockChainDB** : _블록체인의 전체 혹은 헤더를 저장합니다._
-
-- **Mining** : _새로운 블록을 추가 및 PoW알고리즘 수행합니다._
-
-- **Wallet** : _사용자의 화폐, 주소, 키 관리 및 트랜잭션 생성합니다._
-
-**노드들은 크게 4가지로 분류할 수 있습니다.**
-
-- **Full Node** : _`Routing`, `BlockChainDB`, `Mining`, `Wallet`기능을 모두 갖고 있는 노드입니다._
-
-- **SPV Node** : _Simplified Payment Verification Node로 `Routing`, `Wallet` 기능을 갖고 있습니다._
-
-- **Solo Miner** : _`Routing`, `BlockChainDB`, `Mining` 기능을 갖고 있으며 채굴을 주 목적으로 하는 Node입니다._
-
-- **Mining Node** : _Pool protocol server에 의해 관리되는 `Mining`기능만 갖고 있는 Node입니다._
-
-### SPV Node 와 Full Node 상호작용 순서
-
-1. _특정 `SPV Node` A가 다른 `SPV Node` B에게 보내는 `Trancsaction`을 생성 후 네트워크에 전파합니다._
-2. _`Transaction`이 B에게 전다르 되면 정상적으로 전파된 것으로 확인 가능하며 `Transaction`은 Pool에 저장됩니다._
-3. _A가 B에게 보내는 `Transaction`이 포함된 블록을 후보 블록으로 생성한 `Miner`가 채굴에 성공할 경우 네트워크에 전파됩니다._
-4. _다른 `Full Node`들도 블록을 검증하고 `SPV Node` B는 다른 `Full Node`에게 블록 헤더를 수신합니다_
-
-   ⤷ _`SPV Node` B가 `Full Node`에게 자신의 `Transaction`이 포함 되었는지를 확인하기 위해 특정 `Transaction`만을 요청하면 `Full Node`는 `SPV Node` B를 특정할 수 도 있습니다._
-
-   ⤷ _이 때 [**Bloom Filter**](https://min71.dev/posts/cryptography-data-structure-for-verification#bloom-filter)를 이용합니다._
+Adesso avete imparato come configurare un Anti-DDoS per il vostro server Minecraft! Ricordatevi di non condividere l'indirizzo IP numerico del vostro server e di usare un firewall con solo le porte necessarie aperte!
 
 ---
+## Links utili
 
-## Bitcoin Block
-
-### nonce, Target, Difficulty
-
-- **nonce** : _비트코인 `PoW`의 정답을 의미하며 `nonce`를 찾은 `Miner`가 `Coinbase`를 포함한 `Tx Fee`를 받아갑니다. `Miner`들이 `nonce`를 찾는 것은 어렵지만 주변 다른 `Node`들이 `nonce`를 검증하는 것은 쉽다는 특징이 있습니다._
-
-- **Target** : _비트코인 `PoW`의 문제를 의미하며 `Miner`는 `Target`보다 작은 해시값을 찾아야 합니다._
-
-- **Difficulty** : _비트코인 `PoW` `Target`의 난이도를 의미합니다. 블록은 평균 10분에 1개가 채굴됙게 되는데 2,016개의 블록마다 채굴 평균속도가 길 경우, `Difficulty`가 내려가고, 빠를경우 `Difficulty`가 올라갑니다._
-
-### Block Verfication
-
-**Miner가 nonce를 찾더라도 바로 블록에 올라가는 것이 아닌 nonce를 찾은 Miner가 제안하는 블록을 검증 후 주변 노드들에게 전파합니다.**
-
-> 📌 _각 Node들이 Block을 검증하기 위한 자세한 CheckList는 [여기서](https://www.oreilly.com/library/view/mastering-bitcoin/9781491902639/ch08.html) `Validating a New Block` 항목을 통해 확인 가능합니다._
-
-### Orphan Block
-
-**채택되지 못한 Block을 의미하며 고아 블록이라고도 합니다.**
-
-<div
-  style={{
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    borderRadius: '8px',
-    boxShadow:'0px 1px 1px 0px rgba(0,0,0,0.08) 0px 2px 2px 0px rgba(0,0,0,0.12) 0px 4px 4px 0px rgba(0,0,0,0.16) 0px 8px 8px 0px rgba(0,0,0,0.2)',   
-    padding:"0.1rem 1.5rem",
-    margin:"1rem 0"
-  }}
->
-
-✅ _만약 같은 height의 Block을 동시에 찾았다면 그것을 전파받은 Node들은 각자 검증 후 그 이후의 height의 Block을 채굴하며 최종적으로 제일 height가 높은 블록을 모두에게 전파합니다._
-
-_이 과정에서 모두에게 전파되지 못한 블록들을 **Orphan Block**이라고 하며 이런 시스템 때문에 Block이 Chain에 올라가더라도 최종적으로 승인이 되기 위해선 6개의 Block이 올라가야 거래가 확정되며 Coinbase Tx도 100개의 Blcok 이후에 승인됩니다._
-
-</div>
-
----
-
-### Reference
-
-- [Mastering Bitcoin](https://www.oreilly.com/library/view/mastering-bitcoin/9781491902639/)
+- - [Il mio sito](https://lorrixdev.it)
+- - [Discord](https://discord.lorrixdev.it)
+  
