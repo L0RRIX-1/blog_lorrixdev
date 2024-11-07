@@ -1,12 +1,14 @@
-eslint-disable @next/next/no-img-element
+// Rimuovi il commento se non è necessario oppure mantienilo per disabilitare il warning
+// /* eslint-disable @next/next/no-img-element */
+
 const Hits = () => {
   return (
     <img
       alt=""
       src=""
-      style={{ width: '80px', height: 'auto', paddingTop: '1px' }}
-      width={100}
-      height={25}
+      style={{ display: 'none' }} // Nasconde l'immagine
+      width={0} // Setta larghezza a 0
+      height={0} // Setta altezza a 0
     />
   )
 }
