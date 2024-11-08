@@ -1,4 +1,3 @@
-import AboutContent from '@/components/about/AboutContent'
 import AuthorLayout from '@/layouts/AuthorLayout'
 import { genPageMetadata } from 'app/seo'
 import { Authors, allAuthors } from 'contentlayer/generated'
