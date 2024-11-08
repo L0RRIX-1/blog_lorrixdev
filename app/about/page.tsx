@@ -12,8 +12,7 @@ export default function Page() {
   return (
     <>
       <AuthorLayout content={mainContent}>
-        {/* Puoi abilitare questo se desideri usare l'MDXLayoutRenderer */}
-        {/* <MDXLayoutRenderer code={author.body.code} /> */}
+        {null /* Aggiunge un children vuoto per soddisfare il tipo */}
       </AuthorLayout>
     </>
   )
