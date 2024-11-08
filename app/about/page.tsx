@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <AuthorLayout content={mainContent}>
-        <AboutContent />
+        {/* Puoi abilitare questo se desideri usare l'MDXLayoutRenderer */}
         {/* <MDXLayoutRenderer code={author.body.code} /> */}
       </AuthorLayout>
     </>
